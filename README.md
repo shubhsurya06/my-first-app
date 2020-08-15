@@ -37,9 +37,20 @@ Below are the points which I have learned today
 3. Event Binding
 4. Two-Way Data Binding
 5. Did small assignment to better understand all above points.
-    Assignment task given below:-
+    Assignment 1 task given below:-
     1. Add a input field which updates the porperty "username" via Two-Way binding
     2. Output the username property via String interpolation (in a paragraph below input)
     3. Add a button which may only be clicked if the username is NOT an empty string
     4. Upon clicking the button, the username should be reset to in EMPTY string
+
+Learned about Build-in DIRECTIVES of angular like *ngIf, *ngFor, ngStyle, ngClass
+And, also did a small assignement based on this
+
+Assignment 2 task given below:-
+    1. Add A button which says 'Display Details'
+    2. Add a paragraph with any content of your choice (e.g. 'Secret password = tuna')
+    3. Toggle the displaying of that paragraph with the button created in the first step
+    4. Log all button clicks in an array and output that array below the secret paragraph (may be log a timestamp or increment no)
+    5. Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color  (via ngClass) without using index
+    6. Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color  (via ngClass) with using index
 -->

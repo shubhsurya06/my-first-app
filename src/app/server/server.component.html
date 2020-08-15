@@ -1,19 +1,35 @@
+<p>Get server status:-</p>
+<!-- Using ng-style directive to add styles to attributes -->
+<!-- <p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}.</p> -->
+
+<!-- Using ng-Class directive to add classes dynamically -->
+<p [ngClass]="{ online: getServerStatus() == 'online' }" [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}.</p>
+
 <div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <h3>Column 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4">
-            <h3>Column 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4">
-            <h3>Column 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
+    <div class="jumbotron">
+        <p>Assignment 2 here:-</p>
+        <ol>
+            <li>Add A button which says 'Display Details'</li>
+            <li>Add a paragraph with any content of your choice (e.g. 'Secret password = tuna')</li>
+            <li>Toggle the displaying of that paragraph with the button created in the first step</li>
+            <li>Log all button clicks in an array and output that array below the secret paragraph (may be log a timestamp or increment no)</li>
+            <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color  (via ngClass)</li>
+        </ol>
+        <hr>
+        <button class="btn btn-primary" (click)="showParagraph()">Display Details</button>
+        <p *ngIf="isShowParagraph">Secret password = tuna</p>
+        <!-- Iterating loop without index -->
+        <!-- <p *ngFor="let button of buttonClickArray" [ngStyle]="{backgroundColor: button >= 5 ? 'blue' : 'transparent'}" 
+            [ngClass]="{colorWhite: button >= 5}">
+            button click :- {{button}}
+        </p> -->
+        <!-- Iterating loop without index ends -->
+
+        <!-- Iterating loop with index -->
+        <p *ngFor="let button of buttonClickArray; let i = index" [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}" 
+                [ngClass]="{colorWhite: i >= 4}">
+                button click :- {{button}}
+            </p>
+            <!-- Iterating loop with index ends -->
     </div>
 </div>

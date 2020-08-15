@@ -36,6 +36,7 @@ export class AppComponent {
   serverName = "test server";
 
   serverCreated(){
+    this.isServerCreated = true;
     this.showServerStatus = "Created server name is:- " + this.serverName + "!";
   }
 
@@ -50,9 +51,14 @@ export class AppComponent {
   // 2. Output the username property via String interpolation (in a paragraph below input)
   // 3. Add a button which may only be clicked if the username is NOT an empty string
   // 4. Upon clicking the button, the username should be reset to in EMPTY string
-  userName = "Shubham Suryawanshi";
+  userName = "maxillian";
   clearUsername(){
     this.userName = '';
   }
+  // Assignment ends here
+
+  // Built-inDirectives
+  // NG-IF directive
+  isServerCreated = false;
   
 }
