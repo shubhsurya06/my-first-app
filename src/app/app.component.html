@@ -1,12 +1,49 @@
-<h1>Hello, this is {{name}}.</h1>
-<p>Welcome to my world!</p>
-<div class="jumbotron text-center">
-    <h1>My First Bootstrap Page</h1>
-    <p>Resize this responsive page to see the effect!</p>
-    <app-warning-alert></app-warning-alert>
+<div class="container">
+    <h1>Hello, this is {{ getName() }} and I am {{ years }} years old.</h1>
+    <!-- note that, years is not string, its a number, so string interpolation only works with those variable datatypes
+    who can be easlily converted to strings. -->
+
+    <p>Welcome to my world!</p>
+    <div class="jumbotron">
+        <!-- <h1>My First Bootstrap Page</h1>
+        <p>Resize this responsive page to see the effect!</p> -->
+<!-- 
+        <br/>
+        <br /> -->
+        <div class="row">
+            <div class="col-md-4">
+                <!-- <input type="text" class="form-control" (input)="updatedServerName($event)"> -->
+                <input type="text" class="form-control" [(ngModel)]="serverName">
+            </div>
+        </div>
+        <button class="btn btn-primary" [disabled]="!allowButton" (click)="serverCreated()">App Server</button>
+        <!-- <app-warning-alert></app-warning-alert> -->
+        <p>{{ showServerStatus }}</p>
+        <hr>
+
+        <p>Assignment here:-</p>
+        <ul>
+            <li>add a input field which updates the porperty "username" via Two-Way binding</li>
+            <li>Output the username property via String interpolation (in a paragraph below input)</li>
+            <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+            <li>Upon clicking the button, the username should be reset to in EMPTY string</li>
+        </ul>
+        <div class="row" style="margin:20px;">
+            <div class="col-md-2">
+                <label>Username:</label>
+            </div>
+            <div class="col-md-8">
+                <!-- <input type="text" class="form-control" (input)="updatedServerName($event)"> -->
+                <input type="text" class="form-control" [(ngModel)]="userName">
+                <p>Entered username:- {{ userName }}</p>
+                <button class="btn btn-danger" (click)="clearUsername()" [disabled]="!userName || userName==''">Clear</button>
+            </div>
+        </div>
+
+    </div>
 </div>
+
 
 <!-- <div app-servers></div> -->
 <!-- <app-servers></app-servers> -->
 <!-- <div class="app-servers"></div> -->
-
