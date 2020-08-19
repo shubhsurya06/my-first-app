@@ -1,23 +1,19 @@
+<!--
 <div class="container">
-    <!-- <h1>Hello, this is {{ getName() }} and I am {{ years }} years old.</h1> -->
-    <!-- note that, years is not string, its a number, so string interpolation only works with those variable datatypes
-    who can be easlily converted to strings. -->
+    <h1>Hello, this is {{ getName() }} and I am {{ years }} years old.</h1>
+    note that, years is not string, its a number, so string interpolation only works with those variable datatypes
+    who can be easlily converted to strings.
 
-    <!-- <p>Welcome to my world!</p> -->
+    <p>Welcome to my world!</p>
     <div class="jumbotron">
-        <!-- <h1>My First Bootstrap Page</h1>
-        <p>Resize this responsive page to see the effect!</p> -->
-<!-- 
-        <br/>
-        <br /> -->
         <div class="row">
             <div class="col-md-4">
-                <!-- <input type="text" class="form-control" (input)="updatedServerName($event)"> -->
+                <input type="text" class="form-control" (input)="updatedServerName($event)">
                 <input type="text" class="form-control" [(ngModel)]="serverName">
             </div>
         </div>
         <button class="btn btn-primary" [disabled]="!allowButton" (click)="serverCreated()">App Server</button>
-        <!-- <app-warning-alert></app-warning-alert> -->
+        <app-warning-alert></app-warning-alert>
         <p *ngIf="isServerCreated; else noServer">{{ showServerStatus }}</p>
         <ng-template #noServer>
             <p>No server was created.</p>
@@ -36,7 +32,7 @@
                 <label>Username:</label>
             </div>
             <div class="col-md-8">
-                <!-- <input type="text" class="form-control" (input)="updatedServerName($event)"> -->
+                <input type="text" class="form-control" (input)="updatedServerName($event)">
                 <input type="text" class="form-control" [(ngModel)]="userName">
                 <p>Entered username:- {{ userName }}</p>
                 <button class="btn btn-danger" (click)="clearUsername()" [disabled]="!userName || userName==''">Clear</button>
@@ -45,11 +41,21 @@
 
     </div>
 </div>
-
-
-<!-- <div app-servers></div> -->
+-->
+<!-- <div app-servers></div> 
 <div class="container">
     <app-servers></app-servers>
 </div>
 
-<!-- <div class="app-servers"></div> -->
+ <div class="app-servers"></div> -->
+
+ <app-header></app-header>
+
+ <div class="container">
+     <div class="row">
+        <div class="col-md-12">
+            <app-recipes></app-recipes>
+            <app-shopping-list></app-shopping-list>
+        </div>
+     </div>
+ </div>
