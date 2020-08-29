@@ -4,11 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-  // styles: [`
-  //   h1{
-  //     color: red;
-  //   }
-  // `]
 })
 export class AppComponent {
   // String interpolation part start
@@ -60,5 +55,10 @@ export class AppComponent {
   // Built-inDirectives
   // NG-IF directive
   isServerCreated = false;
+
+  featureSelected = 'recipe';
+  onNavigate(navigatingFeature: string){
+    this.featureSelected = navigatingFeature;
+  }
   
 }

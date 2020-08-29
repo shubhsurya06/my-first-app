@@ -49,13 +49,15 @@
 
  <div class="app-servers"></div> -->
 
- <app-header></app-header>
+ <app-header (loadedFeature)="onNavigate($event)"></app-header>
 
  <div class="container">
      <div class="row">
         <div class="col-md-12">
-            <app-recipes></app-recipes>
-            <app-shopping-list></app-shopping-list>
+            <app-recipes *ngIf="featureSelected == 'recipe'; else shoppingList"></app-recipes>
+            <ng-template #shoppingList>
+                <app-shopping-list></app-shopping-list>
+            </ng-template>
         </div>
      </div>
  </div>
