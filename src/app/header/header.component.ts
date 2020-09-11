@@ -6,10 +6,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 
 export class HeaderComponent{
-    @Output() loadedFeature = new EventEmitter<string>();
+    // @Output() loadedFeature = new EventEmitter<string>();
 
-    loadFeature(feature: string){
-        this.loadedFeature.emit(feature);
-    }
+    // loadFeature(feature: string){
+    //     this.loadedFeature.emit(feature);
+    // }
 
 }
